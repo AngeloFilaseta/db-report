@@ -16,9 +16,9 @@ jobs:
           root_file: main.tex
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode --shell-escape
       - name: Rename file
-        run: mv main.pdf layangelo-latex.pdf
+        run: mv main.pdf db-project-report.pdf
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: layangelo-latex.pdf
+          files: db-project-report.pdf
           token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}

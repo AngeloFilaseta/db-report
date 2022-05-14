@@ -1,26 +1,38 @@
-\documentclass{article}
-% Import all the packages
-\input{imports}
-% Setup the layout of the document
-\input{layangelo-latex/layout}
-\addbibresource{document/bibliography.bib}
+\documentclass[a4paper,12pt]{report}
+
+\input{imports.tex}
+
+\addbibresource{bibliography.bib}
+\setlength{\arrayrulewidth}{1mm}
+\setlength{\tabcolsep}{18pt}
+
+\renewcommand{\arraystretch}{1.2}
+
+\newcommand {\mline}{
+	\begin{center}
+		\line(1,0){250}
+	\end{center}
+}
+\titleformat*{\section}{\large\bfseries}
+\title{PROGETTO BASI DI DATI\\2018-2019}
+\author{Angelo Filaseta, Alessandro Talmi}
+\date{18 Giugno 2019}
 
 \begin{document}
 
-% Print the title (first page)
-\input{document/title}
+\maketitle
+
+\input{chapters/abstract}
 
 \tableofcontents
 
-\newpage
+\input{chapters/chapter1}
+\input{chapters/chapter2}
+\input{chapters/chapter3}
+\input{chapters/chapter4}
+\input{chapters/chapter5}
 
-\listoffigures
-
-\newpage
-
-\input{document/content}
-
-\newpage
+\nocite{*}
 
 \printbibliography
 
